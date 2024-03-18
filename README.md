@@ -1,7 +1,8 @@
 # ap_givecash [ESX & QBCore]
 This script facilitates the seamless transfer of in-game currency between players, thereby enhancing the gaming experience.
 
-[![Watch the video](https://img.youtube.com/vi/WOwofFk1ePg/maxresdefault.jpg)](https://youtu.be/WOwofFk1ePg)
+[![YouTube Video Button](https://img.shields.io/badge/Watch%20on%20YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/WOwofFk1ePg)
+
 
 Dependencies:
 
