@@ -34,14 +34,14 @@ createInputMenu = function(data)
         size = 'md'
     })
 	if alert == 'confirm' then
-        local ap = {
-            target = GetPlayerServerId(NetworkGetPlayerIndexFromPed(data.entity)),
-            amount = input[1],
-            note = input[2]
-        }
-        TriggerServerEvent('ap_givecash:checkPlayer', ap)
-        handleInputDialog(false, data)
+		local ap = {
+		    target = GetPlayerServerId(NetworkGetPlayerIndexFromPed(data.entity)),
+		    amount = input[1],
+		    note = input[2]
+		}
+		TriggerServerEvent('ap_givecash:checkPlayer', ap)
 	end
+	handleInputDialog(false, data)
 end
 
 handleInputDialog = function(bool, data)
