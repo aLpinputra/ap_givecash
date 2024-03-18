@@ -1,4 +1,4 @@
-# ap_givecash
+# ap_givecash [ESX & QBCore]
 This script facilitates the seamless transfer of in-game currency between players, thereby enhancing the gaming experience.
 
 Dependencies:
