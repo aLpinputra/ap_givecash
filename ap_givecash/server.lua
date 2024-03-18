@@ -8,10 +8,6 @@ GetPlayerId = function(id)
     return Config.Core == 'esx' and ESX.GetPlayerFromId(id) or Config.Core == 'qb' and QBCore.Functions.GetPlayer(id)
 end
 
-GetIdentifier = function(Player)
-    return Config.Core == 'esx' and Player.identifier or Config.Core == 'qb' and Player.citizenid
-end
-
 GetSource = function(Player)
     return Config.Core == 'esx' and Player.source or Config.Core == 'qb' and Player.PlayerData.source
 end
