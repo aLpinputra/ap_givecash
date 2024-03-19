@@ -34,14 +34,14 @@ createInputMenu = function(data)
         size = 'md'
     })
 	if alert == 'confirm' then
-		local ap = {
-		    target = GetPlayerServerId(NetworkGetPlayerIndexFromPed(data.entity)),
-		    amount = input[1],
-		    note = input[2]
-		}
-		TriggerServerEvent('ap_givecash:checkPlayer', ap)
+        local ap = {
+            target = GetPlayerServerId(NetworkGetPlayerIndexFromPed(data.entity)),
+            amount = input[1],
+            note = input[2]
+        }
+        TriggerServerEvent('ap_givecash:sendMoney', ap)
+        handleInputDialog(false, data)
 	end
-	handleInputDialog(false, data)
 end
 
 handleInputDialog = function(bool, data)
@@ -58,18 +58,6 @@ handleInputDialog = function(bool, data)
         end
     end)
 end
-
-RegisterNetEvent('ap_givecash:sendAlert')
-AddEventHandler('ap_givecash:sendAlert', function(data)
-    local alert = lib.alertDialog({
-        header = 'Accept?',
-        content = 'You receive money amounting to $' .. lib.math.groupdigits(data.amount) .. (data.note ~= '' and '  \nNotes : ' .. data.note or ''),
-        centered = true,
-        cancel = true,
-        size = 'md'
-    })
-    TriggerServerEvent('ap_givecash:sendMoney', data, alert)
-end)
 
 if Config.Target == 'ox' then
     exports.ox_target:addGlobalPlayer({
